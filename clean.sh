@@ -9,3 +9,13 @@ rm simple_beamer_slides_fuels.synctex
 rm simple_beamer_slides_fuels.synctex.gz
 rm simple_beamer_slides_fuels.toc
 rm simple_beamer_slides_fuels.vrb
+
+rm simple_beamer_slides_reliability.aux
+rm simple_beamer_slides_reliability.log
+rm simple_beamer_slides_reliability.nav
+rm simple_beamer_slides_reliability.out
+rm simple_beamer_slides_reliability.snm
+rm simple_beamer_slides_reliability.synctex
+rm simple_beamer_slides_reliability.synctex.gz
+rm simple_beamer_slides_reliability.toc
+rm simple_beamer_slides_reliability.vrb
