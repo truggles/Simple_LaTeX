@@ -1,21 +1,11 @@
 #!/usr/bin/env bash
 
-rm simple_beamer_slides_fuels.aux
-rm simple_beamer_slides_fuels.log
-rm simple_beamer_slides_fuels.nav
-rm simple_beamer_slides_fuels.out
-rm simple_beamer_slides_fuels.snm
-rm simple_beamer_slides_fuels.synctex
-rm simple_beamer_slides_fuels.synctex.gz
-rm simple_beamer_slides_fuels.toc
-rm simple_beamer_slides_fuels.vrb
-
-rm simple_beamer_slides_reliability.aux
-rm simple_beamer_slides_reliability.log
-rm simple_beamer_slides_reliability.nav
-rm simple_beamer_slides_reliability.out
-rm simple_beamer_slides_reliability.snm
-rm simple_beamer_slides_reliability.synctex
-rm simple_beamer_slides_reliability.synctex.gz
-rm simple_beamer_slides_reliability.toc
-rm simple_beamer_slides_reliability.vrb
+rm simple_beamer_slides_*.aux
+rm simple_beamer_slides_*.log
+rm simple_beamer_slides_*.nav
+rm simple_beamer_slides_*.out
+rm simple_beamer_slides_*.snm
+rm simple_beamer_slides_*.synctex
+rm simple_beamer_slides_*.synctex.gz
+rm simple_beamer_slides_*.toc
+rm simple_beamer_slides_*.vrb

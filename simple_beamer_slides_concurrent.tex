@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{subcaption} % http://www.peteryu.ca/tutorials/publishing/latex_captions
+\usepackage[labelfont=bf,textfont=normalfont,singlelinecheck=on,justification=raggedright]{subcaption} % will apply to all subcaptions
+\usepackage{pgffor}
+\usepackage{keycommand}
+\usepackage{tikz}
+
+
+
+\newcommand{\addThreePlots}[3]{%
+    \begin{frame}
+    \frametitle{#1 - version #2}
+    \begin{figure}[htbp]
+    \centering
+        \begin{subfigure}[t]{0.9\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/summary_boxes_#1_#2_SWB.png}
+            %\caption{Boxes}\label{fig:#3_a}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.6\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/correlations_#1_#2_SWB.png}
+            \caption{Correlations}\label{fig:#3_b}
+        \end{subfigure}
+        \begin{subfigure}[t]{0.35\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{plots/correlation_diff_#1_#2_SWB.png}
+            \caption{Difference in correlations}\label{fig:#3_c}
+        \end{subfigure}
+        %\caption{
+        %}
+        \label{fig:#3}
+    \end{figure}
+    \end{frame}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Concurrance Study]{Concurrant vs. Non-concurrent data} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Tyler Ruggles} % Your name
+\author[Tyler Ruggles]{\includegraphics[height=2cm,width=2.1669cm]{carnegie_logo.jpg}\\Tyler Ruggles}
+\institute[Carnegie Science] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+Carnegie Institution for Science \\ % Your institution for the title page
+\medskip
+\textit{truggles@carnegiescience.edu} % Your email address
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%%% Add logo to every slide
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.8cm]{carnegie_logo.jpg}};
+\end{tikzpicture}}
+
+%\begin{frame}
+%\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+%\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Plot Dump} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+%\addThreePlots{Curtailment/Capacity, Fuel Cost, and Fuel Demand}{bivariateCurtailmentDivCapVsCostWithDemandMarkers.png}{fig9}{Nov05v4}
+\addThreePlots{ERCOT}{Apr06v1}{fig1}
+\addThreePlots{PJM}{Apr06v1}{fig1}
+\addThreePlots{NYISO}{Apr06v1}{fig1}
+\addThreePlots{FR}{Apr06v1}{fig1}
+
+
+\end{document} 
